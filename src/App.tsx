@@ -30,16 +30,22 @@ function App() {
       <div className="flex justify-between mx-32 my-8 text-xl">
         <div>dfsdf</div>
         <div className="flex gap-10">
-          <div>about.</div>
-          <div>projects.</div>
-          <div>experience.</div>
+          <a href="#about" className="cursor-pointer hover:text-green-500">
+            about.
+          </a>
+          <a href="#projects" className="cursor-pointer hover:text-green-500">
+            projects.
+          </a>
+          <a href="#experience" className="cursor-pointer hover:text-green-500">
+            experience.
+          </a>
         </div>
       </div>
 
-      <div className="flex flex-col mt-24 items-center text-white">
+      <div id="about" className="flex flex-col mt-24 items-center text-white">
         <div className="grid grid-flow-col gap-10 w-[850px]">
           <div className="border-white border-2 rounded-xl p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <img className="h-[280px]" src={image} />
+            <img className="h-[300px]" src={image} />
           </div>
           <div>
             <div className="flex items-baseline gap-4">
@@ -52,30 +58,55 @@ function App() {
               full stack developer from india.
             </p>
             <p>
-              I'm an engineer dedicated to building scalable websites and
-              applications that make a meaningful impact.With a focus on user
-              experience, design aesthetics, and developer satisfaction, I
-              create interfaces and experiences that captivate users and align
-              with brand identities. Let's collaborate to craft something
-              extraordinary for the digital world.
+              I am a dedicated engineer specializing in building robust,
+              scalable web and mobile applications that drive impactful results.
+              With a strong focus on enhancing user experience, incorporating
+              sleek design aesthetics, and prioritizing developer efficiency, I
+              bring applications to life from concept through deployment. Let's
+              collaborate to craft exceptional digital solutions that truly make
+              a difference.
             </p>
             <div className="flex gap-6 my-4">
-              <FaGithub
-                className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700"
-                size={30}
-              />
-              <FaLinkedinIn
-                className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700"
-                size={30}
-              />
-              <FaXTwitter
-                className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700"
-                size={30}
-              />
-              <FaInstagram
-                className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700"
-                size={30}
-              />
+              <a
+                href="https://github.com/AdityaNik"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub
+                  className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                  size={30}
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aditya-nikam-7342aa234/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn
+                  className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                  size={30}
+                />
+              </a>
+              <a
+                href="https://x.com/Adinik_tw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaXTwitter
+                  className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                  size={30}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/adi_nikam_04/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram
+                  className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                  size={30}
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -229,7 +260,7 @@ function App() {
             <FiExternalLink />
           </Button>
         </a>
-        <div className="mt-10">
+        <div id="projects" className="mt-10">
           <div>things i have worked on...</div>
           <div className="mb-20 mt-4">
             {projects.map((project) => {
@@ -295,7 +326,7 @@ function App() {
           </div>
         </div>
 
-        <div>
+        <div id="experience">
           <div>experience till now...</div>
           <div className="mb-20 mt-4">
             {experience.map((exp, index) => {
@@ -353,10 +384,46 @@ function App() {
                 </div>
 
                 <div className="flex justify-center gap-6 size-100 mt-10">
-                  <FaGithub size={30} />
-                  <FaLinkedinIn size={30} />
-                  <FaXTwitter size={30} />
-                  <FaInstagram size={30} />
+                  <a
+                    href="https://github.com/AdityaNik"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub
+                      className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                      size={30}
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/aditya-nikam-7342aa234/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedinIn
+                      className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                      size={30}
+                    />
+                  </a>
+                  <a
+                    href="https://x.com/Adinik_tw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaXTwitter
+                      className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                      size={30}
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/adi_nikam_04/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram
+                      className="transition ease-in-out duration-200 transform hover:scale-125 hover:text-green-700 cursor-pointer"
+                      size={30}
+                    />
+                  </a>
                 </div>
               </CardContent>
             </Card>
