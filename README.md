@@ -1,1 +1,1 @@
-# You can copy I you like
+# You can copy if you like
