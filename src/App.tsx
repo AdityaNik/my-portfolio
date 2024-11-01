@@ -23,13 +23,14 @@ import { Button } from "./components/ui/button";
 import { Card, CardContent } from "./components/ui/card";
 import { FiExternalLink } from "react-icons/fi";
 import { experience, projects } from "./lib/utils";
+import { MdMail } from "react-icons/md";
 
 function App() {
   return (
     <div className="font-mono">
-      <div className="flex justify-between mx-32 my-8 text-xl">
-        <div>dfsdf</div>
-        <div className="flex gap-10">
+      <div className="flex justify-between lg:mx-32 md:mx-32 mx-10 my-8 lg:text-xl md:text-xl">
+        <div className="hidden md:block">dfsdf</div>
+        <div className="flex lg:gap-10 md:gap-10 gap-4">
           <a href="#about" className="cursor-pointer hover:text-green-500">
             about.
           </a>
@@ -43,21 +44,21 @@ function App() {
       </div>
 
       <div id="about" className="flex flex-col mt-24 items-center text-white">
-        <div className="grid grid-flow-col gap-10 w-[850px]">
-          <div className="border-white border-2 rounded-xl p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <img className="h-[300px]" src={image} />
+        <div className="lg:w-[900px] flex flex-col lg:flex-row justify-center gap-10">
+          <div className="flex justify-center lg:justify-start lg:w-[900px] mx-10 lg:m-0 border-white border-2 rounded-xl p-2 transition duration-300 ease-in-out transform hover:scale-105">
+            <img className="w-full h-full" src={image} />
           </div>
-          <div>
-            <div className="flex items-baseline gap-4">
-              <h1 className="scroll-m-20 text-3xl tracking-tight lg:text-4xl">
+          <div className="flex justify-center flex-col mx-4 lg:m-0">
+            <div className="flex text-center items-baseline gap-4">
+              <h1 className="text-3xl  lg:text-4xl text-center lg:text-left">
                 Aditya Nikam
               </h1>
               <p>(he/him)</p>
             </div>
-            <p className="leading-7 [&:not(:first-child)]:mb-4">
+            <p className="mb-2 text-sm lg:text-lg text-center lg:text-left">
               full stack developer from india.
             </p>
-            <p>
+            <p className="text-center lg:text-left">
               I am a dedicated engineer specializing in building robust,
               scalable web and mobile applications that drive impactful results.
               With a strong focus on enhancing user experience, incorporating
@@ -66,7 +67,7 @@ function App() {
               collaborate to craft exceptional digital solutions that truly make
               a difference.
             </p>
-            <div className="flex gap-6 my-4">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 my-4">
               <a
                 href="https://github.com/AdityaNik"
                 target="_blank"
@@ -111,13 +112,13 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-20 mb-4 font-bold">
+        <div className="mx-10 text-center mt-20 mb-4 font-bold">
           <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
             cool teck stack I work with
           </h4>
         </div>
 
-        <div className="flex gap-10 m-4 cursor-pointer">
+        <div className="mx-10 flex flex-wrap gap-10 m-4 cursor-pointer">
           <a
             href="https://expressjs.com/"
             target="_blank"
@@ -200,7 +201,7 @@ function App() {
           </a>
         </div>
 
-        <div className="flex gap-10 mb-10 cursor-pointer">
+        <div className="mx-10 flex flex-wrap gap-10 m-4 cursor-pointer">
           <a
             href="https://solana.com/"
             target="_blank"
@@ -243,8 +244,8 @@ function App() {
           </a>
         </div>
 
-        <div>
-          <p>I try to keep this list updated</p>
+        <div className="mt-4">
+          <p className="text-sm lg:text-lg">I try to keep this list updated</p>
         </div>
         <a
           href="https://drive.google.com/file/d/1-bFtBl2p_2eHyaYA6t-CsT4eG-hWFJxE/view?usp=sharing"
@@ -260,24 +261,28 @@ function App() {
             <FiExternalLink />
           </Button>
         </a>
-        <div id="projects" className="mt-10">
-          <div>things i have worked on...</div>
+        <div id="projects" className="mt-20">
+          <div className="text-center lg:text-start">
+            things i have worked on...
+          </div>
           <div className="mb-20 mt-4">
             {projects.map((project) => {
               return (
-                <div className="w-[960px] px-6 my-8 hover:border-l-4 hover:border-l-green-500 cursor-pointer">
+                <div className="lg:w-[960px] px-6 my-8 hover:border-l-4 hover:border-l-green-500 cursor-pointer">
                   <div className="flex gap-2 text-lg">
                     <h3 className="scroll-m-20 text-xl font-bold tracking-tight">
                       {project.title}
                     </h3>
                   </div>
                   <button
-                    className="bg-green-300 text-gray-800 px-4 text-sm"
+                    className="bg-green-300 text-gray-800 px-4 text-sm my-2"
                     style={{ borderRadius: "5px" }}
                   >
                     Completed
                   </button>
-                  <div className="text-lg ">{project.description}</div>
+                  <div className="text-md lg:text-lg">
+                    {project.description}
+                  </div>
                   <div className="flex gap-4">
                     <a
                       target="_blank"
@@ -287,7 +292,7 @@ function App() {
                       <Button
                         variant={"link"}
                         style={{ borderRadius: "8px" }}
-                        className=" text-green-400 text-lg"
+                        className=" text-green-400 text-md lg:text-lg"
                       >
                         checkout
                         <FiExternalLink />
@@ -301,7 +306,7 @@ function App() {
                       <Button
                         variant={"link"}
                         style={{ borderRadius: "8px" }}
-                        className=" text-green-400 text-lg"
+                        className=" text-green-400 text-md lg:text-lg"
                       >
                         Github
                         <FiExternalLink />
@@ -327,30 +332,34 @@ function App() {
         </div>
 
         <div id="experience">
-          <div>experience till now...</div>
+          <div className="text-center lg:text-start">
+            experience till now...
+          </div>
           <div className="mb-20 mt-4">
             {experience.map((exp, index) => {
               return (
                 <div
                   key={index}
-                  className="w-[960px] px-6 my-8 hover:border-l-4 hover:border-l-green-500 cursor-pointer"
+                  className="lg:w-[960px] px-6 my-8 hover:border-l-4 hover:border-l-green-500 cursor-pointer"
                 >
                   <div className="flex gap-2 text-lg">
-                    <h3 className="scroll-m-20 text-xl font-bold tracking-tight">
+                    <h3 className="scroll-m-20 text-md lg:text-xl font-bold tracking-tight">
                       {exp.title}
                     </h3>
-                    <p className="text-gray-300"> - {exp.company}</p>
+                    <p className="text-gray-300 text-sm"> - {exp.company}</p>
                   </div>
-                  <div className="text-sm text-gray-300">{exp.location}</div>
+                  <div className="text-sm text-gray-300 mt-2">
+                    {exp.location}
+                  </div>
                   <div className="text-sm text-gray-300 mb-2">
                     {exp.duration}
                   </div>
-                  <div className="text-lg">
+                  <div className="text-md lg:text-lg">
                     {exp.description.map((desc, i) => (
-                      <p key={i}>• {desc}</p>
+                      <p key={i}>{desc}</p>
                     ))}
                   </div>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-4 mt-4">
                     {exp.technologies?.map((tech) => {
                       return (
                         <button
@@ -369,13 +378,21 @@ function App() {
         </div>
 
         <div>
-          <div className="my-10">
-            <Card className="w-[850px] bg-zinc-800">
+          <div className="m-4 lg:m-10">
+            <Card className="lg:w-[850px] bg-zinc-800">
               <CardContent>
-                <div className="flex justify-center m-4">
-                  nikamditya@gmail.com
+                <div className="flex my-4 justify-center gap-4">
+                  <div className="bg-green-500 text-neutral-800 rounded-full h-8 w-8 flex items-center justify-center">
+                    <MdMail />
+                  </div>
+                  <a
+                    href="mailto:nikamditya@gmail.com"
+                    className="text-white hover:underline mt-[0.22rem] text-center"
+                  >
+                    nikamditya@gmail.com
+                  </a>
                 </div>
-                <div className="m-8">
+                <div className="text-center">
                   <p>
                     I'm actively seeking new ventures and would welcome any
                     inquiries or hellos. Please don't hesitate to reach out via
